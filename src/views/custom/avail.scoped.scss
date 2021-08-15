@@ -1,0 +1,16 @@
+.avail{
+	max-width: 600px;
+	border-radius: .5rem;
+	margin: auto;
+	min-height: 260px;
+	.card-footer{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.custom-checkbox{
+	margin-bottom: 0.7rem;
+}
+.calendar{
+	max-width: 991px;
+}

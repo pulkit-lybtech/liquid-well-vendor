@@ -1,0 +1,19 @@
+// Here you can add other styles
+.call-controls{
+	display: flex;
+	justify-content: center;
+
+	.btn{
+		box-shadow: 0 3px 14px rgba(0, 0, 0,.05);
+		width: 3.25rem;
+		height: 3.25rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		display: block;
+		margin: 0 .4rem;
+		transition: .25s ease;
+		
+	}
+}
