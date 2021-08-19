@@ -1,7 +1,48 @@
-import React from 'react'
-import { FaPlay } from 'react-icons/fa'
-export default function interviewerProfile() {
-	return (
+import { CChart } from '@coreui/react-chartjs'
+import React, { useState } from 'react'
+import { FaPlay, FaVideoSlash, FaMicrophone,FaMicrophoneSlash, FaVideo  } from 'react-icons/fa'
+
+function  InterviewerProfile()  {
+	
+	// STATEs /////////////////////// 
+	const [ isMute, setIsMute ] = useState(false)
+	const [isVideo, setIsVideo ] = useState(false)
+
+	const datasets = [
+		{
+		  label: 'Reports ',
+		  fill: false,
+		  lineTension: 0.1,
+		  backgroundColor: 'rgba(75,192,192,0.4)',
+		  borderColor: 'rgba(75,192,192,1)',
+		  borderCapStyle: 'butt',
+		  borderDash: [],
+		  borderDashOffset: 0.0,
+		  borderJoinStyle: 'miter',
+		  pointBorderColor: 'rgba(75,192,192,1)',
+		  pointBackgroundColor: '#fff',
+		  pointBorderWidth: 1,
+		  pointHoverRadius: 5,
+		  pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+		  pointHoverBorderColor: 'rgba(220,220,220,1)',
+		  pointHoverBorderWidth: 2,
+		  pointRadius: 1,
+		  pointHitRadius: 10,
+		  data: [65, 59, 80, 81, 56, 55, 40],
+		},
+	  ]
+
+	  const options = {
+		// tooltips: {
+		//   enabled: false,
+		//   custom: customTooltips
+		// },
+		maintainAspectRatio: false
+	  }
+
+	return (	
+		
+
 		<div>
 			<div className="card">
 				
@@ -14,19 +55,47 @@ export default function interviewerProfile() {
 						
 					</div>
 
+
+
+					<div className="poly-lines">
+						<CChart type="line" datasets={datasets} options={options} />
+
+					</div>
+
+
 					<div className="button-group call-controls justify-content-center my-4">
 						<button className="btn btn-pill ">
 							<FaPlay />
 						</button>
-						<button className="btn btn-pill  ">
-							Pause  
-						</button>
-						<button className="btn btn-pill  ">
-							Stop  
-						</button>
+
+						{
+							isMute ? <button onClick={() => setIsMute(false)} className={isMute ? "btn btn-pill active" : "btn btn-pill"}>
+								<FaMicrophone size={ 24 } />  
+							</button> : 
+							<button onClick={() => setIsMute(true)} className={isMute ? "btn btn-pill bg-danger" : "btn btn-pill"}>
+								<FaMicrophoneSlash size={ 24 } />  
+							</button>
+						}
+						
+
+						{
+							isVideo ? <button onClick={() => setIsVideo(false)} className={isVideo ? "btn btn-pill active" : "btn btn-pill"}>
+								<FaVideo size={ 24 } />  
+							</button> : 
+							<button onClick={() => setIsVideo(true)} className="btn btn-pill ">
+								<FaVideoSlash size={ 24 } />  
+							</button>
+						}
+				
+
 					</div>
 				</div>
 			</div>
 		</div>
 	)
 }
+
+
+
+
+export default InterviewerProfile

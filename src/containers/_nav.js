@@ -93,11 +93,7 @@ const _nav = [
     route: '/admin-vms',
     icon: 'cil-cursor',
     _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'VMS Earnings',
-        to: '/vms-earning',
-      },
+
       {
         _tag: 'CSidebarNavItem',
         name: 'All Interviews',
@@ -108,7 +104,7 @@ const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'All Questions',
-    to: '/vms-questions',
+    to: '/all-quest',
     icon: 'cil-file',
 
   },
