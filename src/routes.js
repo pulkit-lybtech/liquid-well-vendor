@@ -7,6 +7,7 @@ import AllQuestions from './views/custom/AllQuestions';
 import Availability from './views/custom/Availability';
 import Calendar from './views/custom/Calendar';
 import interviewerProfile from './views/custom/interviewerProfile';
+import Settings from './views/custom/Settings';
 
 
 
@@ -94,7 +95,8 @@ const routes = [
   { path: '/all-candid', name: 'All Candidates ', component: AllCandidates },
   { path: '/availability', name: 'Set Availability ', component: Availability },
   { path: '/calendar-management', name: 'Set Availability ', component: Calendar },
-  { path: '/all-quest', component: AllQuestions, name: 'All Questions'}
+  { path: '/all-quest', component: AllQuestions, name: 'All Questions'},
+  { path: '/setting', component: Settings, name: 'All Questions'}
 
 ];
 

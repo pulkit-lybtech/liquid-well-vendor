@@ -30,6 +30,11 @@ const _nav = [
       },
       {
         _tag: 'CSidebarNavItem',
+        name: 'Set availability',
+        to: '/availability',
+      },
+      {
+        _tag: 'CSidebarNavItem',
         name: 'Interview Questions',
         to: '/int-quest',
       },
@@ -74,11 +79,11 @@ const _nav = [
         name: 'All Candidates',
         to: '/all-candid',
       },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Condidate Appointment',
-        to: '/candid-appoint',
-      },
+      // {
+      //   _tag: 'CSidebarNavItem',
+      //   name: 'Condidate Appointment',
+      //   to: '/candid-appoint',
+      // },
     ],
   },
 
@@ -101,6 +106,7 @@ const _nav = [
       },
     ],
   },
+ 
   {
     _tag: 'CSidebarNavItem',
     name: 'All Questions',
@@ -108,6 +114,7 @@ const _nav = [
     icon: 'cil-file',
 
   },
+ 
   {
     _tag: 'CSidebarNavItem',
     name: 'Calendar Management ',
@@ -116,16 +123,21 @@ const _nav = [
 
   },
  
- 
- 
   {
     _tag: 'CSidebarNavDivider'
   },
+
   {
     _tag: 'CSidebarNavTitle',
     _children: ['Settings'],
   },
- 
+  
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Profile Settings ',
+    to: '/setting',
+    icon: 'cil-settings',
+  },
 ]
 
 export default _nav

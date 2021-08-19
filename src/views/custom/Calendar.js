@@ -13,7 +13,7 @@ function Calendar() {
   selectedDay.fill(0);
 
   const dayTimeHandler = (i) => {
-    setSelectedDay(selectedDay[i])
+    setSelectedDay(...selectedDay.slice(0,i), selectedDay[1],)
   }
 
   return (
@@ -46,7 +46,7 @@ function Calendar() {
                       selectedDay.map((item,i)=> {
                         return(
                           <td className="p-0">
-                            <button onClick={i => dayTimeHandler()} className={ ( item == 0 ) ? "bg bg-warning " : "bg bg-light" }>
+                            <button onClick={i => dayTimeHandler()} className={ ( item == 0 ) ? "bg bg-warning " : "bg bg-success" }>
                               &nbsp;
                               {selectedDay[item+1]}
                             </button>
