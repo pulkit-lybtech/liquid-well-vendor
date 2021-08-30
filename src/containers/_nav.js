@@ -138,6 +138,33 @@ const _nav = [
     to: '/setting',
     icon: 'cil-settings',
   },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Pages',
+    badge: {
+      color: 'warning',
+      text: 'Testing',
+    }, 
+    route: '/pagees',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Login',
+        to: '/login',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Sign Up',
+        to: '/register',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: '404 Error',
+        to: '/404',
+      },
+    ]
+  }
 ]
 
 export default _nav

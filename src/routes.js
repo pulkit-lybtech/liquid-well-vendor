@@ -8,6 +8,9 @@ import Availability from './views/custom/Availability';
 import Calendar from './views/custom/Calendar';
 import interviewerProfile from './views/custom/interviewerProfile';
 import Settings from './views/custom/Settings';
+import Login from './views/pages/login/Login';
+import Page404 from './views/pages/page404/Page404';
+import Register from './views/pages/register/Register';
 
 
 
@@ -96,7 +99,11 @@ const routes = [
   { path: '/availability', name: 'Set Availability ', component: Availability },
   { path: '/calendar-management', name: 'Set Availability ', component: Calendar },
   { path: '/all-quest', component: AllQuestions, name: 'All Questions'},
-  { path: '/setting', component: Settings, name: 'All Questions'}
+  { path: '/setting', component: Settings, name: 'All Questions'},
+  { path: '/login', component: Login, name: 'All Questions'},
+  { path: '/register', component: Register, name: 'All Questions'},
+  { path: '/404', component: Page404, name: 'All Questions'},
+
 
 ];
 

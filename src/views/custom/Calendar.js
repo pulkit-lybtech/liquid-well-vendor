@@ -10,10 +10,12 @@ function Calendar() {
 
   const timeInt = 9;
 
-  selectedDay.fill(0);
+  
 
-  const dayTimeHandler = (i) => {
-    setSelectedDay(...selectedDay.slice(0,i), selectedDay[1],)
+  const dayTimeHandler = e => {
+    // alert(times[i], j)
+    console.log(e)
+    e.target.className = 'bg  bg-primary '
   }
 
   return (
@@ -33,23 +35,23 @@ function Calendar() {
               <tr>
                 <th style={{ width: "100px" }}> &nbsp; </th>
                 {days.map((day) => {
-                  return <th  key={day}> {day}</th>;
+                  return <th  key={day}> {day} </th>;
                 })}
               </tr>
             </thead>
             <tbody>
-              {times.map((time) => {
+              {times.map((time, timeInd) => {
                 return (
                   <tr key={time}>
                     	<td> {((time + timeInt) < 10) ? ((time + timeInt) > 12 ? time + ":00 AM" : time +":00 PM ") : (time )+ ":00 AM"    } </td>
                     {
-                      selectedDay.map((item,i)=> {
+                      selectedDay.map((item,timeInd)=> {
                         return(
                           <td className="p-0">
-                            <button onClick={i => dayTimeHandler()} className={ ( item == 0 ) ? "bg bg-warning " : "bg bg-success" }>
+                            <div onClick={e => dayTimeHandler(e)} className={ ( item ===   0 ) ? "bg bg-warning " : "bg bg-success" }>
                               &nbsp;
-                              {selectedDay[item+1]}
-                            </button>
+                              
+                            </div>
                           </td>
                         )
                       })
@@ -59,6 +61,11 @@ function Calendar() {
               })}
             </tbody>
           </table>
+          <div className="flex py-2">
+            <button className="btn px-5 btn-primary">
+              Save 
+            </button>
+          </div>
         </div>
       </div>
     </div>
